@@ -13,8 +13,7 @@ const { loginUser } = require('./loginController');
 const Register = require("./models/logins");
 
 
-const port = process.env.PORT || 3000;
-const static_path = path.join(__dirname, "../Public");
+const static_path = path.join(__dirname, "../public");             // This tells Express that all files inside /public should be served as static assets.
 const templates_path = path.join(__dirname, "../templates/views");
 const partials_path = path.join(__dirname, "../templates/partials");
 
@@ -81,60 +80,12 @@ app.post("/signup",async (req, res) => {
        } 
 
 });
-/*
-app.post("/signup", async (req, res) => {
-    try {
-        const { email, password } = req.body;
-
-        // Check if email and password are provided
-        if (!email || !password) {
-            return res.status(400).send('Email and password are required');
-        }
-
-        // Check if the user already exists
-        const existingUser = await admin.auth().getUserByEmail(email);
-       
-        // Continue with user creation logic
-        // ...
-        console.log(req.body);
-        const user = {
-          email: req.body.email,
-          password : req.body.password
-        }
-    
-      if (existingUser) {
-        // Email address already exists, handle the situation accordingly
-        console.error('Email address already exists:', email);
-        return res.status(400).send('Email address already exists');
-      } else {
-        // Create a new user
-        const user = await admin.auth().createUser({
-          email: email,
-          password: password,
-          // Other user data
-        });
-        // Handle success
-        console.log('User created:', user);
-        res.status(200).send('User created successfully');
-      }
-        const userResponse = await admin.auth().createUser({
-          email : user.email,
-          password: user.password,
-          emailVerfied : false,
-          disabled: false
-      
-          
-        });
-        res.json(userResponse);
-    } catch (error) {
-        console.error('Error:', error);
-        res.status(500).send('Internal Server Error');
-    }
-});*/
 
 app.get("/*",(req, res ) => {
   res.send("404 Error Page ");
 });
+
+const port = process.env.PORT || 10000;
 
 app.listen(port, () => {
   console.log(`Server is running at port no ${port}`);

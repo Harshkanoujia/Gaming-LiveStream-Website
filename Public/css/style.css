@@ -6,7 +6,7 @@
 .main
 {
     width: 100%;
-    background : linear-gradient(to top, rgba(23, 23, 23, 0.093)40%,rgba(29, 33, 33, 0.641)60%) , url(wallpaper.png);
+    background : linear-gradient(to top, rgba(23, 23, 23, 0.093)40%,rgba(29, 33, 33, 0.641)60%) , url(../images/wallpaper.png);
     background-position: center;
     background-size: cover ;
     height: 109vh;
