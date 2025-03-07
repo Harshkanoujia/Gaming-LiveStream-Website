@@ -5,6 +5,8 @@
                 <p class="link">Don't have an account<br></p>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/ionicons@6.1.3/dist/ionicons.js"></script> 
+    <script src="/templates/partials/script.js"></script>
+
 </head> 
 <body>
     <div class="main">
@@ -45,9 +47,33 @@
                     <a href="#"><ion-icon name="logo-Linkedin"></ion-icon></a> 
                     <a href="#"><ion-icon name="logo-Github"></ion-icon></a> 
                 </div>  
-                <a href="/chatbox"><p class="chatbox-link">chatbox</p></a>
             </div>
         </div>
     </div>
+    
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    {{!-- <script src="https://mediafiles.botpress.cloud/9a507845-f5f6-4b3c-bcb1-06eb68e3b7d0/webchat/config.js"defer></script> --}}
+    
+    <script>
+        window.botpressWebChat.init({
+            "composerPlaceholder": "Ask me...",
+            "botConversationDescription": "gaminglivestream.com",
+            "botId": "9a507845-f5f6-4b3c-bcb1-06eb68e3b7d0",
+            "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+            "messagingUrl": "https://messaging.botpress.cloud",
+            "clientId": "9a507845-f5f6-4b3c-bcb1-06eb68e3b7d0",
+            "webhookId": "2041398e-2296-4ec8-8e71-ad7e0305ba9c",
+            "lazySocket": true,
+            "themeName": "prism",
+            "botName": "The Gaming Livestream Website",
+            "stylesheet": "https://webchat-styler-css.botpress.app/prod/451b1097-2193-41d5-966a-2d4f97d25db1/v64866/style.css",
+            "frontendVersion": "v1",
+            "useSessionStorage": true,
+            "enableConversationDeletion": true,
+            "theme": "prism",
+            "themeColor": "#2563eb",
+            "allowedOrigins": []
+        });
+    </script>
 </body>
 </html>

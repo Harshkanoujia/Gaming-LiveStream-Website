@@ -1,10 +1,10 @@
 {
-    "name": "mern-backend",
+    "name": "gaming-livestream-project",
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "nodemon src/app.js  -e js,hbs",
+        "dev": "nodemon src/index.js  -e js,hbs",
         "start": "nodemon index.js"
     },
     "description": "",

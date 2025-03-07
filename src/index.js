@@ -6,7 +6,6 @@ const hbs = require("hbs");
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
  require("./db/conn");
-const admin = require("firebase-admin");
 
 const login = require("./models/login");
 const { loginUser } = require('./loginController');
