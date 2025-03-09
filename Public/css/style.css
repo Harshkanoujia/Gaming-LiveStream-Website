@@ -14,14 +14,14 @@
 
 .navbar
 {
-    width: 1200px;
+    width: 90%;
     height: 75px;
     margin: auto;
 }
 
 .icons
 {
-    width: 200px;
+    width: 200px; 
     float: left;
     height: 70px;
 }
